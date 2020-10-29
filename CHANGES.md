@@ -1,4 +1,613 @@
-2015-02-21, Version 1.8.0
+2020-09-02, Version 5.4.0
+=========================
+
+ * fix: allow to include options to mongodb connector (Jamil Omar)
+
+ * Update loopback-connector to 5.x (Miroslav Bajtoš)
+
+ * chore: switch to DCO (Diana Lau)
+
+ * docs: update loopback types link (Agnes Lin)
+
+ * chore: add Node.js 14 to travis (Diana Lau)
+
+ * Extract function that map db data to model entity (=)
+
+
+2020-07-10, Version 5.3.0
+=========================
+
+
+
+2020-07-10, Version 5.2.4
+=========================
+
+ * fix: sanitize extra dollar signs for operators (Agnes Lin)
+
+ * fix: fix (Agnes Lin)
+
+ * fix: allow arrays to be stored in type ObjecId (Agnes Lin)
+
+ * fix: fix sections order (Agnes Lin)
+
+ * chore: add bluemix security to the ci ignore list (Agnes Lin)
+
+ * docs: update Mongo connector readme with lb4 style (Agnes Lin)
+
+ * Update README.md (VusalIs)
+
+ * fix: throws when the custom id field name is set (Agnes Lin)
+
+ * Update strong-globalize to ^6.0 (Miroslav Bajtoš)
+
+ * Add Node.js 13.x to Travis matrix (Miroslav Bajtoš)
+
+ * Drop support for Node 8.x (Miroslav Bajtoš)
+
+ * chore: update strong-globalize version (Diana Lau)
+
+
+2020-03-19, Version 5.2.3
+=========================
+
+ * Exclude 'deps' and '.github' from npm publish (Dominique Emond)
+
+
+2020-02-10, Version 5.2.2
+=========================
+
+ * chore: update copyright year (Diana Lau)
+
+ * chore: update CODEOWNERS (Diana Lau)
+
+ * coerce property value defined as array of ObjectID (=)
+
+ * fix: update the error message and name (#561) (Janny)
+
+
+2019-11-22, Version 5.2.1
+=========================
+
+ * fix creation of LB4 models with auto-generated id (Miroslav Bajtoš)
+
+ * chore: improve issue and PR templates (Nora)
+
+ * feat: update dependenies (Francois)
+
+ * feat: upgrade to eslint v6 (Francois)
+
+
+2019-10-25, Version 5.2.0
+=========================
+
+ * Remove db.unref as it's not implemented (Raymond Feng)
+
+ * fixed linting errors (Louis Beullens)
+
+ * implicitNullType + tests (Louis Beullens)
+
+
+2019-10-24, Version 5.1.0
+=========================
+
+ * Resolve issue #540 for v4.2.0 (Herberts Cruz)
+
+ * Callback with url parsing error (Raymond Feng)
+
+
+2019-09-19, Version 5.0.1
+=========================
+
+ * fix: preserve id on update (Hage Yaapa)
+
+ * fix: call toDatabase update and upsert (alexandreferreira)
+
+ * docs: special characters in username and password (Hage Yaapa)
+
+
+2019-06-26, Version 5.0.0
+=========================
+
+ * chore: add coverage (Hage Yaapa)
+
+ * fix: ObjectID data type preservation (Hage Yaapa)
+
+ * feat: add mongodb.dataType to property definition (Hage Yaapa)
+
+ * chore: replace var with let and const (Hage Yaapa)
+
+ * chore: meaningful variable names (Hage Yaapa)
+
+ * Run shared tests from both v3 and v4 of juggler (Miroslav Bajtoš)
+
+ * Fix tests to correctly assert on MongoNetworkError (Miroslav Bajtoš)
+
+ * Add Node.js 12 to Travis CI platforms (Miroslav Bajtoš)
+
+ * specify downstreamIgnoreList in CI (Diana Lau)
+
+
+2019-05-03, Version 4.2.0
+=========================
+
+ * fix: edge cases to coerce nested decimal props (biniam)
+
+ * test: strict model update with mongo operators (biniam)
+
+ * chore: update copyrights years (Diana Lau)
+
+ * add check for embedded property type conversion (Dimitris)
+
+ * Remove port when using mongodb+srv (JREEVE)
+
+ * ci: fix previously failing tests (biniam)
+
+
+2019-04-12, Version 4.1.0
+=========================
+
+ * fix: coerce deep nested decimal properties (biniam)
+
+ * Fix missing '_id' when selected in filter.fields (#439) (Helge Willum Thingvad)
+
+
+2018-11-06, Version 4.0.0
+=========================
+
+ * Use new url parser by default (#462) (Hugo Da Roit)
+
+ * remove the infinite inspect (#480) (Janny)
+
+ * Add case insensitive indexes support (maxim.sharai)
+
+
+2018-10-23, Version 3.9.0
+=========================
+
+ * support decimal128 (#475) (Janny)
+
+ * Added `"authSource"` in doc connection properties (Rémi AUGUSTE)
+
+ * Convert embedded binary properties to buffer (ntsekouras)
+
+ * Convert projection fields option to object (Dimitris)
+
+
+2018-09-19, Version 3.8.0
+=========================
+
+ * fix performance issues on count #464 (Clément)
+
+ * feat: allow methods to pass strictObjectIDCoercion (virkt25)
+
+
+2018-09-14, Version 3.7.1
+=========================
+
+ * fix: map new names to old for connector hooks (virkt25)
+
+
+2018-09-12, Version 3.7.0
+=========================
+
+ * update deprecated mongo driver commands (Hugo Da Roit)
+
+ * Remove hard dependency of memwatch-next (Raymond Feng)
+
+ * Add support for protocol to be 'monogodb+srv' (Raymond Feng)
+
+
+2018-08-15, Version 3.6.0
+=========================
+
+ * docs: update with security consideration section (virkt25)
+
+ * fix: sanitize query by default (virkt25)
+
+ * change `count` to `countDocuments` (Rahmat Nugraha)
+
+ * add `useNewUrlParser` on validOptionNames (Rahmat Nugraha)
+
+ * Dedicated Model for testing disableDefaultSort (HugoPoi)
+
+ * Add disableDefaultSort in README (HugoPoi)
+
+ * Add settings disableDefaultSort for find method (HugoPoi)
+
+
+2018-07-23, Version 3.5.0
+=========================
+
+ * chore: drop node 4 and update deps (Taranveer Virk)
+
+ * [WebFM] cs/pl/ru translation (candytangnb)
+
+
+2018-06-05, Version 3.4.4
+=========================
+
+ * Fields projection fix (#436) (John Gonyo)
+
+
+2018-04-06, Version 3.4.3
+=========================
+
+ * update bson version (Diana Lau)
+
+
+2018-03-23, Version 3.4.2
+=========================
+
+ * chore:update CODEOWNERS (Diana Lau)
+
+ * Prioritize db url (Dimitris)
+
+ * CODEOWNERS: add nitro404 (Miroslav Bajtoš)
+
+
+2018-01-19, Version 3.4.1
+=========================
+
+ * fix: allow db name to be parsed from url (Raymond Feng)
+
+
+2018-01-19, Version 3.4.0
+=========================
+
+ * upgrade to mongodb driver 3.x (Raymond Feng)
+
+ * Alias find as findById (jannyHou)
+
+
+2017-12-04, Version 3.3.1
+=========================
+
+ * Switch to bson.ObjectID (#401) (Kevin Delisle)
+
+ * chore: update license (Diana Lau)
+
+
+2017-10-13, Version 3.3.0
+=========================
+
+ * update strong-globalize to 3.1.0 (shimks)
+
+ * Create Issue and PR Templates (#386) (Sakib Hasan)
+
+ * Use stalebot on this repo (#383) (Kevin Delisle)
+
+ * Use stalebot on this repo (Kevin Delisle)
+
+ * Add CODEOWNER file (Diana Lau)
+
+
+2017-07-10, Version 3.2.1
+=========================
+
+ * Apply feedback (ssh24)
+
+ * Add docs on lazyConnect flag (ssh24)
+
+
+2017-06-28, Version 3.2.0
+=========================
+
+ * Remove the hard-coded writeConcern (Raymond Feng)
+
+ * Document strictObjectIDCorecion flag (Loay)
+
+ * Allow different forms of regexp on like/nlike op (ssh24)
+
+ * Require init on mocha args (ssh24)
+
+ * Use buildSort function to sort (ssh24)
+
+ * Add docker setup (#373) (Sakib Hasan)
+
+ * test: use mongodb-3.2 on Travis (#369) (Ryan Graham)
+
+
+2017-04-17, Version 3.1.0
+=========================
+
+ * Update connector version (#368) (Sakib Hasan)
+
+ * Replicate issue_template from loopback repo (#350) (siddhipai)
+
+ * Fix buildNearFilter to work with any key depth (#322) (Corentin H)
+
+ * Fix Update when id not found (Loay)
+
+ * Add additional envs for node v4/v6 (#365) (Sakib Hasan)
+
+ * Update node version (ssh24)
+
+ * Reconnect on execute after disconnect (#362) (phairow)
+
+ * update the near query with minDistance test (#361) (Vincent Wen)
+
+ * Fix lazy connect (#360) (phairow)
+
+ * Export the additional functions (#353) (James Cooke)
+
+ * Mongo 3.4 Support/Delete index ‘kind’ property from index options (#335) (Dylan Lundy)
+
+ * Update README.md (Rand McKinney)
+
+
+2017-02-13, Version 3.0.1
+=========================
+
+ * Remove invalid options (jannyHou)
+
+ * Add nestedProperty to connectorCapabilities (jannyHou)
+
+ * Update README.md (Rand McKinney)
+
+ * add info on url override (ivy ho)
+
+ * add link for loopback types to mongodb (ivy ho)
+
+ * replace MySQL with MongodDB (ivy ho)
+
+ * Update Readme with Properties (ivy ho)
+
+ * update lB connector version (Loay)
+
+ * Fix replaceById to report err when id not found (Loay Gewily)
+
+
+2017-01-13, Version 3.0.0
+=========================
+
+ * Delete extraneous `id` for replacById (Amir Jafarian)
+
+ * Update paid support URL (Siddhi Pai)
+
+ * Start 3.x + drop support for Node v0.10/v0.12 (siddhipai)
+
+ * Drop support for Node v0.10 and v0.12 (Siddhi Pai)
+
+ * Start the development of the next major version (Siddhi Pai)
+
+ * Update mongodb version (jannyHou)
+
+ * Update README with correct doc links, etc (Amir Jafarian)
+
+ * Ensure inq/nin use array cond value (Fabien Franzen)
+
+ * More ObjectID vs. String handling improvements (Fabien Franzen)
+
+ * Test returned info for #destroy (Fabien Franzen)
+
+ * Test fix for #253 (Fabien Franzen)
+
+ * Fix Copyright, use process.nextTick (Fabien Franzen)
+
+ * Fix all sorts of issues... (Fabien Franzen)
+
+ * Column renaming should be done before extended ops (Ian Zepp)
+
+ * Added support for renaming columns (Ian Zepp)
+
+
+2016-10-17, Version 1.17.0
+==========================
+
+ * Remove TEST prefix for env vars (#292) (Simon Ho)
+
+ * Add connectorCapabilities global object (Nick Duffy)
+
+ * Update translation files - round#2 (Candy)
+
+ * Update deps to loopback 3.0.0 RC (Miroslav Bajtoš)
+
+ * Remove conflict (jannyHou)
+
+ * fix maxDistance not supported in geo filter. (Vincent Wen)
+
+ * Use juggler@3 for running the tests (Miroslav Bajtoš)
+
+ * Remove !intl (jannyHou)
+
+ * Refactor (jannyHou)
+
+ * Globalization (jannyHou)
+
+ * Support patches afterwards (jannyHou)
+
+ * Use the latest compatible mongodb (jannyHou)
+
+ * Update URLs in CONTRIBUTING.md (#264) (Ryan Graham)
+
+
+2016-05-16, Version 1.15.2
+==========================
+
+ * Update "mongodb" dependency to caret notation (Bram Borggreve)
+
+
+2016-05-03, Version 1.15.1
+==========================
+
+ * insert/update copyrights (Ryan Graham)
+
+ * relicense as MIT only (Ryan Graham)
+
+
+2016-05-03, Version 1.15.0
+==========================
+
+ * Lazy connect when booting app (juehou)
+
+ * Add support for geoNear queries (Timo Saikkonen)
+
+ * Fix linting errors (Amir Jafarian)
+
+ * Auto-update by eslint --fix (Amir Jafarian)
+
+ * Add eslint infrastructure (Amir Jafarian)
+
+ * Implementation for replace (Amir Jafarian)
+
+ * Upgrade should to 8.0.2 (Simon Ho)
+
+ * Check dataSource.connecting to prevent race conditions (Fabien Franzen)
+
+ * Remove email from AUTHORS (Simon Ho)
+
+ * Update description in README.md (Simon Ho)
+
+ * Clean up package.json (Simon Ho)
+
+ * Update AUTHORS (Simon Ho)
+
+ * Add AUTHORS file (Simon Ho)
+
+ * Use ObjectId as internal storage for id (Raymond Feng)
+
+ * test: fix order of semver arguments (Ryan Graham)
+
+ * use mocha for test script (Ryan Graham)
+
+ * Add more tests for id coercion (Raymond Feng)
+
+
+2015-12-13, Version 1.13.2
+==========================
+
+ * Make sure null/undefined id is not coerced (Raymond Feng)
+
+ * Allow runtime configurable test environment (Simon Ho)
+
+ * changed env variable fortest servers (cgole)
+
+
+2015-11-23, Version 1.13.1
+==========================
+
+ * Fix the test set up (Raymond Feng)
+
+ * Added mongo port env var (cgole)
+
+ * Add env variable for mongodb server (cgole)
+
+ * Refer to licenses with a link (Sam Roberts)
+
+ * Fix repository field in package.json (Simon Ho)
+
+ * Use strongloop conventions for licensing (Sam Roberts)
+
+ * Enhance coercion of ids with inq/nin operators (Raymond Feng)
+
+ * Return deleted count (Raymond Feng)
+
+
+2015-08-06, Version 1.13.0
+==========================
+
+ * Added a setting to enable optimsied findOrCreate method so that connector continues to work with mongodb < 2.6 (Mike Bissett)
+
+ * Fixed up merge conflicted dependencies in package.json (Mike Bissett)
+
+ * Update deps (Raymond Feng)
+
+ * implement optimized findOrCreate (Clark Wang)
+
+ * extract sort document building to method (Clark Wang)
+
+
+2015-08-04, Version 1.12.0
+==========================
+
+ * Add regexp operator support (Simon Ho)
+
+ * Enable options.allowExtendedOperators (Fabien Franzen)
+
+ * Enable Model.settings.mongodb.allowExtendedOperators (Fabien Franzen)
+
+ * Update benchmarks (Simon Ho)
+
+
+2015-07-02, Version 1.11.3
+==========================
+
+ * Restore data.id to avoid build breaks (Raymond Feng)
+
+
+2015-06-25, Version 1.11.2
+==========================
+
+ * Revert "Add a workaround for auth with multiple mongos servers" (Raymond Feng)
+
+
+2015-06-15, Version 1.11.1
+==========================
+
+ * Fix the url (Raymond Feng)
+
+ * Replaced ensureIndex() with createIndex() (U-Zyn Chua)
+
+
+2015-06-05, Version 1.11.0
+==========================
+
+ * Add a workaround for auth with multiple mongos servers (Raymond Feng)
+
+ * Use custom collection name for migration (Raymond Feng)
+
+
+2015-06-03, Version 1.10.1
+==========================
+
+ * Make sure disconnect calls back (Raymond Feng)
+
+
+2015-06-01, Version 1.10.0
+==========================
+
+ * Add execute hooks (Raymond Feng)
+
+
+2015-05-29, Version 1.9.2
+=========================
+
+ * Update to memwatch-next for node 0.12 compatibility (Raymond Feng)
+
+
+2015-05-28, Version 1.9.1
+=========================
+
+ * Update deps (Raymond Feng)
+
+
+2015-05-28, Version 1.9.0
+=========================
+
+ * Add options (Raymond Feng)
+
+ * Update README.md (Simon Ho)
+
+ * Add leak detection (Simon Ho)
+
+ * Add benchmarks (Simon Ho)
+
+ * Support `ctx.isNewInstance` (Miroslav Bajtoš)
+
+ * Update deps (Raymond Feng)
+
+ * Cleanup for returning count on update/delete (Simon Ho)
+
+ * Default to `undefined` instead of `0` (Simon Ho)
+
+ * Return info object with affected items count (Simon Ho)
+
+ * added doc about allowExtendedOperators (Pasindu De Silva)
+
+ * Make test instructions more meaningful (Simon Ho)
+
+
+2015-02-20, Version 1.8.0
 =========================
 
  * Update deps (Raymond Feng)

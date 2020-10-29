@@ -1,5 +1,13 @@
-var memwatch = require('memwatch');
-var Todo = require('./fixtures/todo');
+// Copyright IBM Corp. 2015,2019. All Rights Reserved.
+// Node module: loopback-connector-mongodb
+// This file is licensed under the MIT License.
+// License text available at https://opensource.org/licenses/MIT
+
+'use strict';
+
+const memwatch = require('memwatch-next');
+const sinon = require('sinon');
+const Todo = require('./fixtures/todo');
 
 describe('mongodb', function() {
   before(function() {
@@ -18,18 +26,19 @@ describe('mongodb', function() {
   }
 
   function execute(ctx, func, options, done) {
-    var hasOptions = true;
+    let hasOptions = true;
     if (typeof options === 'function') {
       done = options;
       hasOptions = false;
     }
-    var interval = setInterval(function() {
-      if (ctx.iterations >= ITERATIONS || ctx.spy.called) {
-        ctx.spy.called.should.be.false;
+    const interval = setInterval(function() {
+      if (ctx.iterations >= global.ITERATIONS || ctx.spy.called) {
+        ctx.spy.called.should.be.False();
         clearInterval(interval);
         return done();
       }
       ctx.iterations++;
+      // eslint-disable-next-line
       hasOptions ? Todo[func](options) : Todo[func];
     }, 0);
   }
@@ -40,11 +49,14 @@ describe('mongodb', function() {
     });
 
     beforeEach(function createFixtures(done) {
-      Todo.create([
-        {content: 'Buy eggs'},
-        {content: 'Buy milk'},
-        {content: 'Buy cheese'}
-      ], done);
+      Todo.create(
+        [
+          {content: 'Buy eggs'},
+          {content: 'Buy milk'},
+          {content: 'Buy cheese'},
+        ],
+        done,
+      );
     });
 
     it('should not leak when retrieving a specific item', function(done) {
@@ -66,11 +78,16 @@ describe('mongodb', function() {
     });
 
     it('should not leak when creating multiple items', function(done) {
-      execute(this, 'create', [
-        {content: 'Buy eggs'},
-        {content: 'Buy milk'},
-        {content: 'Buy cheese'}
-      ], done);
+      execute(
+        this,
+        'create',
+        [
+          {content: 'Buy eggs'},
+          {content: 'Buy milk'},
+          {content: 'Buy cheese'},
+        ],
+        done,
+      );
     });
   });
 });
